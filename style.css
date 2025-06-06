@@ -1,0 +1,203 @@
+body {
+  background-color: #222;  /* subtle dark grey */
+  color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  width: 300px;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button.btn {
+  background-color: #ff1a1a; /* bright red */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.3s ease, box-shadow 0.4s ease;
+  width: auto;
+  min-width: 120px;
+  box-shadow: 0 0 8px #b30000; /* subtle red glow */
+}
+
+button.btn:hover {
+  background-color: #ff3333;
+  box-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff0000;
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 40px; /* bigger */
+  color: #ff4444;
+  text-align: center;
+  margin: 0 0 15px 0;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff4d4d,
+    0 0 20px #ff1a1a;
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+
+button.btn.active {
+  background-color: #44cc44;
+}
+
+/* Night toggle container */
+.night-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Custom toggle switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #444;
+  border-radius: 26px;
+  transition: 0.4s;
+  border: 1px solid #888;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0 0 3px #0003;
+}
+
+.switch input:checked + .slider {
+  background-color: #44cc44;
+  border-color: #2a9c2a;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Slider Section */
+.slider-section {
+  font-size: 14px;
+}
+
+.range-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 8px;
+}
+
+input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 24px;
+  vertical-align: middle;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #db5050;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0003;
+  margin-top: -4px; /* This centers the thumb on an 8px track */
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Track for Webkit */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #db5050;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  background: #333;
+  border-radius: 4px;
+}
+
+/* IE/Edge */
+input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #db5050;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+  background: #333;
+  border-radius: 4px;
+  height: 8px;
+}
+
+/* Remove outline and background for all */
+input[type="range"]:focus {
+  outline: none;
+}
+
+h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 28px;
+  color: #ff4444;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 6px #ff0000;
+}
